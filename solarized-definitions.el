@@ -80,7 +80,7 @@ to test the approximate color values for accuracy."
         (rotatef base01 base1)
         (rotatef base00 base0))
       `((;; basic
-         (default ((t (:foreground ,base0))))
+         (default ((t (:foreground ,base0 :background ,base03))))
          (cursor
           ((t (:foreground ,base0 :background ,base03 :inverse-video t))))
          (escape-glyph-face ((t (:foreground ,red))))
@@ -169,7 +169,7 @@ to test the approximate color values for accuracy."
          (info-xref-visited ((t (:inherit info-xref :foreground ,magenta))))
          ;; org
          (org-hide ((t (:foreground ,base03))))
-         (org-todo ((t (:foreground ,base03 :background ,red :weight ,bold))))
+         (org-todo ((t (:foreground ,red :weight ,bold))))
          (org-done ((t (:foreground ,green :weight ,bold))))
          (org-todo-kwd-face ((t (:foreground ,red :background ,base03))))
          (org-done-kwd-face ((t (:foreground ,green :background ,base03))))
