@@ -273,7 +273,7 @@ to test the approximate color values for accuracy."
 (defmacro create-solarized-theme (mode)
   `(let ((theme-name ',(intern (concat "solarized-" (symbol-name mode))))
          (defs ',(solarized-color-definitions mode)))
-     `(deftheme ,theme-name ,solarized-description)
+     (deftheme ,(intern (concat "solarized-" (symbol-name mode)))  solarized-description)
      (apply 'custom-theme-set-variables
             theme-name
             (mapcar (lambda (def) (list (car def) (cdr def))) (second defs)))
